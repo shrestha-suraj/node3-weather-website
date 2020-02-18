@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit',(event)=>{
     // address.forEach((each)=>{
     //     location+='%20%'+each
     // })
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+    fetch(`/weather?address=${address}`).then((response) => {
     response.json().then((data, error) => {
         if (error) {
             console.log("Unable to fetch data")

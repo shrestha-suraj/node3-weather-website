@@ -6,6 +6,8 @@ const hbs=require('hbs')
 const assetDirectory=path.join(__dirname,'../public')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+//Port number set by herkou
+const port=process.env.PORT || 3000
 //This allows express to render page depending on the html page name 
 // on the browser url.. Doesnot need any routing for the html pages
 
@@ -120,9 +122,10 @@ app.get('*',(request,response)=>{
 })
 
 
-app.listen(3000,(error)=>{
+//Change this for horku.. change port number
+app.listen(port,(error)=>{
     if(!error){
-        console.log('Server is up')
+        console.log('Server is up on port'+port)
     }else{
         console.log(chalk.red.bold.inverse('If ran into error with server. Run pkill nodejs or pkill node'))
     }
