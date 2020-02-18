@@ -17,7 +17,7 @@ app.set('view engine','hbs')
 //for accessing html from a specific folder
 app.set('views',templatePath)
 
-//Even though i deleated the public html files. I still need it to load js files and css files
+//Even though i deleated the public html files. I still need it to load js files and css file
 app.use(express.static(assetDirectory))
 
 //This things are being done for the headers and footers
