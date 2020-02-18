@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Help
+        </title>
+        <link rel='stylesheet' type='text/css' href='../css/styles.css'>
+        {{!-- Linking an image on the header of the website --}}
+        <link rel='icon' href='./img/weather.png'>
+    </head>
+    <body>
+        <div class='main-content'>
+        {{>header}}
+        {{!-- This image is not in the views folder but it still renders cause we 
+                have given access to express for public folder using app.use(express.static('dirname'))
+         --}}
+        <img class='portrait' src='./img/me.png'>
+        <p>{{name}}</p>
+        </div>
+        {{>footer}}
+    </body>
+</html> 
